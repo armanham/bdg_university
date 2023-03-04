@@ -7,21 +7,21 @@ import java.time.LocalDate;
 import java.util.List;
 
 public abstract class Human {
-    private String name;
+    private String firstName;
     private String lastName;
-    private LocalDate date;
+    private final LocalDate date;
     private String mail;
     private String phoneNumber;
     private List<Address> addresses;
 
-    public Human(String name, String lastName, LocalDate date) {
-        this.name = name;
+    public Human(String firstName, String lastName, LocalDate date) {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.date = date;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
     public String getLastName() {
@@ -32,8 +32,8 @@ public abstract class Human {
         return date;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public void setLastName(String lastName) {
@@ -67,7 +67,7 @@ public abstract class Human {
     @Override
     public String toString() {
         return "Human{" +
-                "name='" + name + '\'' +
+                "name='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", date=" + date +
                 ", mail='" + mail + '\'' +
@@ -76,4 +76,3 @@ public abstract class Human {
                 "}\n";
     }
 }
-
