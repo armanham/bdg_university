@@ -8,12 +8,12 @@ import java.util.List;
 
 public class Course {
     private String name;
-    private Professor teacher;
+    private Professor professor;
     private List<Student> students;
 
-    public Course(String name, Professor teacher, List<Student> students) {
+    public Course(String name, Professor professor, List<Student> students) {
         this.name = name;
-        this.teacher = teacher;
+        this.professor = professor;
         this.students = students;
     }
 
@@ -25,12 +25,12 @@ public class Course {
         this.name = name;
     }
 
-    public Professor getTeacher() {
-        return teacher;
+    public Professor getProfessor() {
+        return professor;
     }
 
-    public void setTeacher(Professor teacher) {
-        this.teacher = teacher;
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
     }
 
     public List<Student> getStudents() {
@@ -45,7 +45,7 @@ public class Course {
     public String toString() {
         return "Course{" +
                 "name='" + name + '\'' +
-                ", teacher=" + teacher +
+                ", teacher=" + professor +
                 ", students=" + students +
                 "}\n";
     }
