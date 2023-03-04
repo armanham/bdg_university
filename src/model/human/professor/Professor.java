@@ -9,8 +9,8 @@ public class Professor extends Human implements CommonFunctions {
     private double salary;
     private DegreeTeacher degree;
 
-    public Professor(String name, String lastName, LocalDate date, double salary, DegreeTeacher degree) {
-        super(name, lastName, date);
+    public Professor(String firstName, String lastName, LocalDate date, double salary, DegreeTeacher degree) {
+        super(firstName, lastName, date);
         this.salary = salary;
         this.degree = degree;
     }
