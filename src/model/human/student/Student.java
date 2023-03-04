@@ -9,7 +9,7 @@ public class Student extends Human implements CommonFunctions {
     private String id;
     private DegreeStudent degree;
 
-    public Student(String firstName, String lastName, LocalDate date, String id, DegreeStudent degree) {
+    public Student(String firstName, String lastName, final LocalDate date, String id, DegreeStudent degree) {
         super(firstName, lastName, date);
         this.id = id;
         this.degree = degree;

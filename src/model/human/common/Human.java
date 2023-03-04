@@ -14,7 +14,7 @@ public abstract class Human {
     private String phoneNumber;
     private List<Address> addresses;
 
-    public Human(String firstName, String lastName, LocalDate date) {
+    public Human(String firstName, String lastName, final LocalDate date) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.date = date;
