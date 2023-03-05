@@ -1,5 +1,5 @@
 package model.human.student;
 
-public enum DegreeStudent {
+public enum Degree {
     BACHELOR, MASTER
 }

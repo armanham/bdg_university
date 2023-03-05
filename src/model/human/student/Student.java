@@ -6,28 +6,28 @@ import model.human.common.Human;
 import java.time.LocalDate;
 
 public class Student extends Human implements CommonFunctions {
-    private String id;
-    private DegreeStudent degree;
+    private int id;
+    private Degree degree;
 
-    public Student(String firstName, String lastName, final LocalDate date, String id, DegreeStudent degree) {
+    public Student(String firstName, String lastName, final LocalDate date, int id, Degree degree) {
         super(firstName, lastName, date);
         this.id = id;
         this.degree = degree;
     }
 
-    public DegreeStudent getDegree() {
+    public Degree getDegree() {
         return degree;
     }
 
-    public void setDegree(DegreeStudent degree) {
+    public void setDegree(Degree degree) {
         this.degree = degree;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
