@@ -1,19 +1,18 @@
-package model.course;
+package model.group;
 
-
-import model.human.professor.Professor;
 import model.human.student.Student;
+import model.subject.Subject;
 
 import java.util.List;
 
-public class Course {
+public class Group {
     private String name;
-    private Professor professor;
     private List<Student> students;
 
-    public Course(String name, Professor professor, List<Student> students) {
+    private List<Subject> subjects;
+
+    public Group(String name, List<Student> students) {
         this.name = name;
-        this.professor = professor;
         this.students = students;
     }
 
@@ -25,14 +24,6 @@ public class Course {
         this.name = name;
     }
 
-    public Professor getProfessor() {
-        return professor;
-    }
-
-    public void setProfessor(Professor professor) {
-        this.professor = professor;
-    }
-
     public List<Student> getStudents() {
         return students;
     }
@@ -41,12 +32,20 @@ public class Course {
         this.students = students;
     }
 
+    public List<Subject> getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
+    }
+
     @Override
     public String toString() {
-        return "Course{" +
+        return "Group{" +
                 "name='" + name + '\'' +
-                ", teacher=" + professor +
                 ", students=" + students +
-                "}\n";
+                ", subjects=" + subjects +
+                '}';
     }
 }
