@@ -1,5 +1,5 @@
 package model.human.professor;
 
-public enum DegreeTeacher {
+public enum Degree {
     LECTURER, VISITING
 }

@@ -2,24 +2,27 @@ package model.human.professor;
 
 import model.human.common.CommonFunctions;
 import model.human.common.Human;
+import model.subject.Subject;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Professor extends Human implements CommonFunctions {
     private double salary;
-    private DegreeTeacher degree;
+    private Degree degree;
+    private List<Subject> subjects;
 
-    public Professor(String firstName, String lastName, final LocalDate date, double salary, DegreeTeacher degree) {
+    public Professor(String firstName, String lastName, final LocalDate date, double salary, Degree degree) {
         super(firstName, lastName, date);
         this.salary = salary;
         this.degree = degree;
     }
 
-    public DegreeTeacher getDegree() {
+    public Degree getDegree() {
         return degree;
     }
 
-    public void setDegree(DegreeTeacher degree) {
+    public void setDegree(Degree degree) {
         this.degree = degree;
     }
 
@@ -29,6 +32,14 @@ public class Professor extends Human implements CommonFunctions {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public List<Subject> getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
     }
 
     @Override
@@ -41,10 +52,13 @@ public class Professor extends Human implements CommonFunctions {
         System.out.println("I drink a cup of coffee.");
     }
 
+
     @Override
     public String toString() {
-        return super.toString() + "Professor{" +
+        return "Professor{" +
                 "salary=" + salary +
+                ", degree=" + degree +
+                ", subjects=" + subjects +
                 "}\n";
     }
 }
