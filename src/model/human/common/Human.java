@@ -1,6 +1,5 @@
 package model.human.common;
 
-
 import model.address.Address;
 
 import java.time.LocalDate;
