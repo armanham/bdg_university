@@ -1,5 +1,6 @@
 package service;
 
+import model.address.Address;
 import model.human.student.Student;
 import repository.StudentRepository;
 
@@ -16,12 +17,18 @@ public class StudentService implements StudentRepository {
             System.out.println("Passed null value");
             return;
         }
+        for (Student item : students) {
+            if (item.getId() == student.getId()) {
+                System.out.print("Id already exists: ");
+                return;
+            }
+        }
         students.add(student);
     }
 
 
     @Override
-    public Student deleteStudentById(int id) {
+    public Student deleteStudentBy(int id) {
         if (id <= 0) {
             System.out.println("Passed parameter must be positive number:");
             return null;
@@ -37,7 +44,7 @@ public class StudentService implements StudentRepository {
 
 
     @Override
-    public List<Student> getByFirstName(String firstName) {
+    public List<Student> getAllBy(String firstName) {
         if (firstName == null || firstName.isEmpty()) {
             System.out.println("Passed null or empty value");
             return null;
@@ -54,7 +61,7 @@ public class StudentService implements StudentRepository {
 
 
     @Override
-    public List<Student> getByFullName(String firstName, String lastName) {
+    public List<Student> getAllBy(String firstName, String lastName) {
         if (firstName == null || lastName == null || firstName.isEmpty() || lastName.isEmpty()) {
             System.out.println("Passed null or empty value");
             return null;
@@ -71,7 +78,7 @@ public class StudentService implements StudentRepository {
 
 
     @Override
-    public Student getById(int id) {
+    public Student getBy(int id) {
         if (id <= 0) {
             System.out.println("Passed parameter must be positive number:");
             return null;
@@ -79,6 +86,21 @@ public class StudentService implements StudentRepository {
         for (Student item : students) {
             if (item.getId() == id) {
                 return item;
+            }
+        }
+        return null;
+    }
+
+
+    @Override
+    public List<Address> getAddressListBy(int id) {
+        if (id <= 0) {
+            System.out.println("Passed parameter must be positive number:");
+            return null;
+        }
+        for (Student item : students) {
+            if (item.getId() == id) {
+                return item.getAddresses();
             }
         }
         return null;

@@ -44,7 +44,7 @@ public class University {
         return "University{" +
                 "courses=" + groups +
                 ", name='" + name + '\'' +
-                ", model.address=" + address +
+                ", address=" + address +
                 "}\n";
     }
 }

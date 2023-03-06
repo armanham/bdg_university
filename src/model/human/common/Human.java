@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public abstract class Human {
+    private int id;
     private String firstName;
     private String lastName;
     private final LocalDate date;
@@ -13,10 +14,19 @@ public abstract class Human {
     private String phoneNumber;
     private List<Address> addresses;
 
-    public Human(String firstName, String lastName, final LocalDate date) {
+    public Human(int id, String firstName, String lastName, final LocalDate date) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.date = date;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -66,7 +76,8 @@ public abstract class Human {
     @Override
     public String toString() {
         return "Human{" +
-                "name='" + firstName + '\'' +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", date=" + date +
                 ", mail='" + mail + '\'' +

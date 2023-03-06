@@ -1,14 +1,16 @@
 package model.group;
 
+import model.human.professor.Professor;
 import model.human.student.Student;
 import model.subject.Subject;
 
 import java.util.List;
 
 public class Group {
+
     private String name;
     private List<Student> students;
-
+    private List<Professor> professors;
     private List<Subject> subjects;
 
     public Group(String name, List<Student> students) {
@@ -32,6 +34,14 @@ public class Group {
         this.students = students;
     }
 
+    public List<Professor> getProfessors() {
+        return professors;
+    }
+
+    public void setProfessors(List<Professor> professors) {
+        this.professors = professors;
+    }
+
     public List<Subject> getSubjects() {
         return subjects;
     }
@@ -45,7 +55,8 @@ public class Group {
         return "Group{" +
                 "name='" + name + '\'' +
                 ", students=" + students +
+                ", professors=" + professors +
                 ", subjects=" + subjects +
-                '}';
+                "}\n";
     }
 }

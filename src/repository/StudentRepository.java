@@ -1,5 +1,6 @@
 package repository;
 
+import model.address.Address;
 import model.human.student.Student;
 
 import java.util.List;
@@ -8,11 +9,15 @@ public interface StudentRepository {
 
     void addStudent(Student student);
 
-    Student deleteStudentById(int id);
+    Student deleteStudentBy(int id);
 
-    List<Student> getByFirstName(String firstName);
+    List<Student> getAllBy(String firstName);
 
-    List<Student> getByFullName(String firstName, String lastName);
+    List<Student> getAllBy(String firstName, String lastName);
 
-    Student getById(int id);
+    Student getBy(int id);
+
+    //TODO getByDegree
+
+    List<Address> getAddressListBy(int id);
 }

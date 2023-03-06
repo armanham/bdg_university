@@ -12,8 +12,8 @@ public class Professor extends Human implements CommonFunctions {
     private Degree degree;
     private List<Subject> subjects;
 
-    public Professor(String firstName, String lastName, final LocalDate date, double salary, Degree degree) {
-        super(firstName, lastName, date);
+    public Professor(int id, String firstName, String lastName, final LocalDate date, double salary, Degree degree) {
+        super(id, firstName, lastName, date);
         this.salary = salary;
         this.degree = degree;
     }
