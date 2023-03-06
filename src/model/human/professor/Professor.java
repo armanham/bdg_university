@@ -1,13 +1,13 @@
 package model.human.professor;
 
-import model.human.common.CommonFunctions;
+import model.human.common.Functions;
 import model.human.common.Human;
 import model.subject.Subject;
 
 import java.time.LocalDate;
 import java.util.List;
 
-public class Professor extends Human implements CommonFunctions {
+public class Professor extends Human implements Functions {
     private double salary;
     private Degree degree;
     private List<Subject> subjects;

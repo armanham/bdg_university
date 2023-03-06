@@ -1,11 +1,11 @@
 package model.human.student;
 
-import model.human.common.CommonFunctions;
+import model.human.common.Functions;
 import model.human.common.Human;
 
 import java.time.LocalDate;
 
-public class Student extends Human implements CommonFunctions {
+public class Student extends Human implements Functions {
     private Degree degree;
 
     public Student(int id, String firstName, String lastName, final LocalDate date, Degree degree) {

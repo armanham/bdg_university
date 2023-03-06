@@ -1,6 +1,6 @@
 package model.human.common;
 
-public interface CommonFunctions {
+public interface Functions {
     void participate();
     void toBreak();
 }
