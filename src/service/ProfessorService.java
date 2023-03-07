@@ -12,7 +12,7 @@ public class ProfessorService implements ProfessorRepository {
     private List<Professor> professors = new ArrayList<>();
 
     @Override
-    public void addProfessor(Professor professor) {
+    public void add(Professor professor) {
         if (professor == null) {
             System.out.println("Passed null value: ");
             return;
@@ -28,7 +28,7 @@ public class ProfessorService implements ProfessorRepository {
 
 
     @Override
-    public Professor deleteProfessorBy(int id) {
+    public Professor deleteBy(int id) {
         if (id <= 0) {
             System.out.println("Passed parameter must be positive number:");
             return null;

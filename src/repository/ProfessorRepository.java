@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface ProfessorRepository {
 
-    void addProfessor(Professor professor);
+    void add(Professor professor);
 
-    Professor deleteProfessorBy(int id);
+    Professor deleteBy(int id);
 
     List<Professor> getAllBy(String firstName);
 

@@ -9,7 +9,7 @@ import java.util.List;
 
 public class GroupService implements GroupRepository {
     @Override
-    public void addGroup(Group group) {
+    public void add(Group group) {
 
     }
 
@@ -19,17 +19,17 @@ public class GroupService implements GroupRepository {
     }
 
     @Override
-    public Group getGroupBy(String name) {
+    public Group getBy(String name) {
         return null;
     }
 
     @Override
-    public List<Group> getAllGroups() {
+    public List<Group> getAll() {
         return null;
     }
 
     @Override
-    public int getCountOfAllGroups() {
+    public int getCountOfAll() {
         return 0;
     }
 

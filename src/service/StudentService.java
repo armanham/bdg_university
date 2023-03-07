@@ -12,7 +12,7 @@ public class StudentService implements StudentRepository {
     private List<Student> students = new ArrayList<>();
 
     @Override
-    public void addStudent(Student student) {
+    public void add(Student student) {
         if (student == null) {
             System.out.println("Passed null value");
             return;
@@ -28,7 +28,7 @@ public class StudentService implements StudentRepository {
 
 
     @Override
-    public Student deleteStudentBy(int id) {
+    public Student deleteBy(int id) {
         if (id <= 0) {
             System.out.println("Passed parameter must be positive number:");
             return null;

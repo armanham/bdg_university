@@ -8,15 +8,15 @@ import java.util.List;
 
 public interface GroupRepository {
 
-    void addGroup(Group group);
+    void add(Group group);
 
     Group deleteBy(String name);
 
-    Group getGroupBy(String name);
+    Group getBy(String name);
 
-    List<Group> getAllGroups();
+    List<Group> getAll();
 
-    int getCountOfAllGroups();
+    int getCountOfAll();
 
     List<Student> getStudentsBy(String groupName);
 
