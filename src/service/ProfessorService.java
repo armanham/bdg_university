@@ -46,6 +46,23 @@ public class ProfessorService implements ProfessorRepository {
 
 
     @Override
+    public List<Professor> deleteAll() {
+        List<Professor> deletedProfessors = new ArrayList<>();
+        for (int i = 0; i < professors.size(); i++) {
+            deletedProfessors.add(professors.remove(i));
+        }
+
+        return deletedProfessors;
+    }
+
+
+    @Override
+    public List<Professor> getAll() {
+        return professors;
+    }
+
+
+    @Override
     public List<Professor> getAllBy(String firstName) {
         if (firstName == null || firstName.isEmpty()) {
             System.out.println("Passed null or empty value");
@@ -81,7 +98,7 @@ public class ProfessorService implements ProfessorRepository {
 
     @Override
     public List<Professor> getAllBy(Degree degree) {
-        if (degree == null){
+        if (degree == null) {
             System.out.println("Passed null value: ");
             return null;
         }

@@ -12,6 +12,10 @@ public interface ProfessorRepository {
 
     Professor deleteBy(int id);
 
+    List<Professor> deleteAll();
+
+    List<Professor> getAll();
+
     List<Professor> getAllBy(String firstName);
 
     List<Professor> getAllBy(String firstName, String lastName);
