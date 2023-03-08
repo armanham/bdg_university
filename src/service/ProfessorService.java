@@ -1,6 +1,7 @@
 package service;
 
 import model.address.Address;
+import model.human.professor.Degree;
 import model.human.professor.Professor;
 import repository.ProfessorRepository;
 
@@ -10,6 +11,7 @@ import java.util.List;
 public class ProfessorService implements ProfessorRepository {
 
     private List<Professor> professors = new ArrayList<>();
+
 
     @Override
     public void add(Professor professor) {
@@ -78,11 +80,29 @@ public class ProfessorService implements ProfessorRepository {
 
 
     @Override
+    public List<Professor> getAllBy(Degree degree) {
+        if (degree == null){
+            System.out.println("Passed null value: ");
+            return null;
+        }
+
+        List<Professor> professorsByDegree = new ArrayList<>();
+        for (Professor item : professors) {
+            if (item.getDegree().equals(degree)) {
+                professorsByDegree.add(item);
+            }
+        }
+        return professorsByDegree;
+    }
+
+
+    @Override
     public Professor getBy(int id) {
         if (id <= 0) {
             System.out.println("Passed parameter must be positive number:");
             return null;
         }
+
         for (Professor item : professors) {
             if (item.getId() == id) {
                 return item;
@@ -98,6 +118,7 @@ public class ProfessorService implements ProfessorRepository {
             System.out.println("Passed parameter must be positive number:");
             return null;
         }
+
         for (Professor item : professors) {
             if (item.getId() == id) {
                 return item.getAddresses();
@@ -113,6 +134,7 @@ public class ProfessorService implements ProfessorRepository {
             System.out.println("Passed parameter must be positive number:");
             return -1;
         }
+
         for (Professor item : professors) {
             if (item.getId() == id) {
                 return item.getSalary();

@@ -1,6 +1,7 @@
 package repository;
 
 import model.address.Address;
+import model.human.student.Degree;
 import model.human.student.Student;
 
 import java.util.List;
@@ -11,13 +12,17 @@ public interface StudentRepository {
 
     Student deleteBy(int id);
 
+    List<Student> deleteAll();
+
+    List<Student> getAll();
+
     List<Student> getAllBy(String firstName);
 
     List<Student> getAllBy(String firstName, String lastName);
 
-    Student getBy(int id);
+    List<Student> getAllBy(Degree degree);
 
-    //TODO getByDegree
+    Student getBy(int id);
 
     List<Address> getAddressListBy(int id);
 }

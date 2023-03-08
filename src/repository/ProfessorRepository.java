@@ -1,6 +1,7 @@
 package repository;
 
 import model.address.Address;
+import model.human.professor.Degree;
 import model.human.professor.Professor;
 
 import java.util.List;
@@ -15,9 +16,9 @@ public interface ProfessorRepository {
 
     List<Professor> getAllBy(String firstName, String lastName);
 
-    Professor getBy(int id);
+    List<Professor> getAllBy(Degree degree);
 
-    //TODO getByDegree
+    Professor getBy(int id);
 
     List<Address> getAddressListBy(int id);
 
